@@ -2,11 +2,15 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 function App() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, getValues, watch } = useForm();
+
+  watch();
 
   function submit(values) {
     console.log(values);
   }
+
+  console.log(getValues());
 
   return (
     <div
